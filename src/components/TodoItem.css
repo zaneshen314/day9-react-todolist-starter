@@ -1,0 +1,54 @@
+/* 容器样式 */
+.todo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: auto;
+}
+
+.todo-item:hover {
+  background-color: rgba(186, 224, 224, 0.7); /* 柔和的蓝绿色 */
+  transform: translateY(-5px);
+}
+
+/* 待办事项文本框 */
+.todo-text {
+  border: solid 2px #7aabbd; /* 更柔和的蓝色边框 */
+  width: 350px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #333333; /* 更柔和的黑色文字 */
+  background-color: #e1e1e1; /* 更柔和的灰色背景 */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.todo-text:focus {
+  border-color: #7aabbd; /* 聚焦时的边框颜色 */
+  background-color: #f4f9fc; /* 更温和的浅蓝背景 */
+  outline: none; /* 移除默认聚焦框 */
+}
+
+.todo-text.done {
+  text-decoration: line-through;
+  color: #aaa; /* 完成项的文字颜色（淡灰色） */
+  background-color: #f7f7f7; /* 更柔和的完成项背景色 */
+}
+
+
+/* 删除按钮样式 */
+.delete-btn {
+  padding: 8px 16px;
+  background-color: #5395c7; /* 删除按钮背景色（亮粉色） */
+  color: white;
+  border: none;
+  border-radius: 8px; /* 边框圆角 */
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease; /* 按钮悬浮时颜色过渡 */
+}
