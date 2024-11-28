@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import {TodoContext} from "../App";
 import {ADD_TODO} from "../context/todoActions";
-
+import "./TodoGenerator.css";
 const TodoGenerator = () => {
   const [text, setText] = useState("")
   const { dispatch } = useContext(TodoContext);

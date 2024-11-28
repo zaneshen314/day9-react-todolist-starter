@@ -1,0 +1,54 @@
+/* Todo Generator 容器 */
+.todo-generator-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 输入框样式 */
+.todo-generator-wrapper input {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #7aabbd;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f7fa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.todo-generator-wrapper input:focus {
+    border-color: #7aabbd;
+    background-color: #e0f3f7;
+    outline: none;
+}
+
+/* 按钮样式 */
+.todo-generator-wrapper button {
+    padding: 10px 15px;
+    margin-left: 15px;
+    background-color: #7aabbd;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.todo-generator-wrapper button:hover {
+    background-color: #649bb1;
+    transform: translateY(-2px);
+}
+
+.todo-generator-wrapper button:active {
+    background-color: #4e8b98;
+    transform: translateY(0);
+}
