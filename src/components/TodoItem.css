@@ -44,7 +44,7 @@
 /* 删除按钮样式 */
 .delete-btn {
   padding: 8px 16px;
-  background-color: #5395c7; /* 删除按钮背景色（亮粉色） */
+  background-color: #ff1f6e; /* 删除按钮背景色（亮粉色） */
   color: white;
   border: none;
   border-radius: 8px; /* 边框圆角 */
