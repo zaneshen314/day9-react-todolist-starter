@@ -1,4 +1,4 @@
-import "./TodoItem.css";
+import "./css/TodoItem.css";
 import {TodoContext} from "../App";
 import {useContext} from "react";
 import {REMOVE_TODO, TOGGLE_TODO} from "../context/todoActions";

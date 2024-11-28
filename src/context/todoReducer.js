@@ -1,8 +1,8 @@
 import {ADD_TODO, REMOVE_TODO, TOGGLE_TODO} from "./todoActions";
 
 export const initialState = [
-  {id: Date.now(), text: "出去吃飯", done: false},
-  {id: Date.now() + 1, text: "馬上睡覺", done: false},
+  {id: Date.now(), text: "和Alwyn出去吃饭", done: false},
+  {id: Date.now() + 1, text: "跟Don学习React", done: true},
 ];
 
 export const todoReducer = (state, action) => {
