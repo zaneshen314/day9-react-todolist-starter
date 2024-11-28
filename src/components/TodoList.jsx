@@ -4,10 +4,9 @@ import TodoGenerator from "./TodoGenerator";
 const TodoList = () => {
   return (
       <div>
-
-          <h3>Todo List</h3>
-          <TodoGroup/>
-          <TodoGenerator/>
+          <h1>Todo List</h1>
+          <TodoGroup />
+          <TodoGenerator />
       </div>
   );
 }
