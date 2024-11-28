@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import {TodoContext} from "../App";
+import {ADD_TODO} from "../context/todoActions";
 
 const TodoGenerator = () => {
   const [text, setText] = useState("")
@@ -11,7 +12,7 @@ const TodoGenerator = () => {
 
   const handleAdd = () => {
     if (text.trim()) {
-      dispatch({ type: "ADD", payload: text });
+      dispatch({ type: ADD_TODO, payload: text });
       setText('');
     }
   }
