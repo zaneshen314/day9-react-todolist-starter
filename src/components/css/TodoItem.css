@@ -24,7 +24,7 @@
   border-radius: 10px;
   font-size: 18px;
   color: #0d1364;
-  background-color: #e1e1e1;
+  background-color: #ffffff;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -36,15 +36,15 @@
 
 .todo-text.done {
   text-decoration: line-through;
-  color: #aaa;
-  background-color: #f7f7f7;
+  color: #6a5353;
+  background-color: #e1e1e1;
 }
 
 
 /* 删除按钮样式 */
 .delete-btn {
   padding: 8px 16px;
-  background-color: #f30d0d;
+  background-color: #2e6fb1;
   color: white;
   border: none;
   border-radius: 8px;

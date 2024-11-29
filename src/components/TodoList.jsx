@@ -38,7 +38,7 @@ const TodoList = () => {
 
         {loading ? (
             <div className="loading-container">
-                <p>Loading...</p>
+                <h3>跟Alwyn开船去了，稍后回来.....</h3>
             </div>
         ) : (
             <>

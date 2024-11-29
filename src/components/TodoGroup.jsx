@@ -7,7 +7,7 @@ const TodoGroup = () => {
     const { state } = useContext(TodoContext);
 
     // 默认每页显示的 todo 数量
-    const [todosPerPage, setTodosPerPage] = useState(5);
+    const [todosPerPage, setTodosPerPage] = useState(3);
 
     // 计算当前页的 todos
     const [currentPage, setCurrentPage] = useState(1);
