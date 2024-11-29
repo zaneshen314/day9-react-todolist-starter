@@ -8,20 +8,22 @@ export const DoneList = () => {
 
     return (
         <div>
-            <h1>Done List</h1>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/todo-list">TodoList</Link>
-                <Link to="/done-list">DoneList</Link>
-            </nav>
+            <div className="home-container">
+                <h1 className="page-title">Done List</h1>
+                <nav className="nav-links">
+                    <Link to="/" className="nav-link">Home</Link>
+                    <Link to="/todo-list" className="nav-link">TodoList</Link>
+                    <Link to="/done-list" className="nav-link">DoneList</Link>
+                </nav>
+                {doneList.map((todo) => {
+                    return (
+                        <div className={"todo-item"} key={todo.id}>
+                            <div className={`todo-text`}>{todo.text}</div>
+                        </div>
+                    );
+                })}
+            </div>
             <br/>
-            {doneList.map((todo) => {
-                return (
-                    <div className={"todo-item"} key={todo.id}>
-                        <div className={`todo-text`}>{todo.text}</div>
-                    </div>
-                );
-            })}
         </div>
     );
 }

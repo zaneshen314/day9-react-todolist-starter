@@ -5,17 +5,19 @@ import {Link} from "react-router-dom";
 
 const TodoList = () => {
   return (
-      <div>
-          <h1>Todo List</h1>
-          <nav>
-              <Link to="/">Home</Link>
-              <Link to="/todo-list">TodoList</Link>
-              <Link to="/done-list">DoneList</Link>
-          </nav>
-          <TodoGroup />
-          <TodoGenerator />
-          <TodoProgress />
-      </div>
+
+
+    <div className="home-container">
+        <h1 className="page-title">Todo List</h1>
+        <nav className="nav-links">
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/todo-list" className="nav-link">TodoList</Link>
+            <Link to="/done-list" className="nav-link">DoneList</Link>
+        </nav>
+        <TodoGenerator />
+        <TodoGroup />
+        <TodoProgress />
+    </div>
   );
 }
 

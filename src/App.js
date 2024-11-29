@@ -3,7 +3,6 @@ import './App.css';
 
 import { initialState, todoReducer } from "./context/todoReducer";
 import BaseRouters from "./routers/BaseRouters";
-import {Link} from "react-router-dom";
 
 export const TodoContext = createContext();
 
