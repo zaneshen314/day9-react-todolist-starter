@@ -5,8 +5,6 @@ import {Link} from "react-router-dom";
 
 const TodoList = () => {
   return (
-
-
     <div className="home-container">
         <h1 className="page-title">Todo List</h1>
         <nav className="nav-links">
