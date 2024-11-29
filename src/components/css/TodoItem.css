@@ -44,11 +44,12 @@
 /* 删除按钮样式 */
 .delete-btn {
   padding: 8px 16px;
-  background-color: #ff1f6e;
+  background-color: #f30d0d;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s ease;
+  margin: 11px;
 }

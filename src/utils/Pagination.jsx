@@ -90,15 +90,14 @@ const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
                 <button onClick={handleJumpPageChange}>跳转</button>
             </div>
 
-            {/* 每页显示的条目数 */}
-            <div className="per-page-selection">
-                <label>每页显示: </label>
-                <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
-                    <option value={5}>5</option>
-                    <option value={10}>10</option>
-                    <option value={15}>15</option>
-                </select>
-            </div>
+            {/*<div className="per-page-selection">*/}
+            {/*    <label>每页显示: </label>*/}
+            {/*    <select value={itemsPerPage} onChange={handleItemsPerPageChange}>*/}
+            {/*        <option value={5}>5</option>*/}
+            {/*        <option value={10}>10</option>*/}
+            {/*        <option value={15}>15</option>*/}
+            {/*    </select>*/}
+            {/*</div>*/}
         </div>
     );
 };
