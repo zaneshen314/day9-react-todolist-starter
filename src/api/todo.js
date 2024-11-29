@@ -9,3 +9,12 @@ export const getTodoList = async () =>{
     return response.data;
 }
 
+export const addTodo = async (newTodo) => {
+    try {
+        const response = await instance.post("/todo", newTodo);
+        return response.data;
+    } catch (error) {
+        console.error('添加 Todo 失败:', error);
+        throw error;
+    }
+}
