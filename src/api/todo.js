@@ -18,3 +18,13 @@ export const addTodo = async (newTodo) => {
         throw error;
     }
 }
+
+export const deleteById = async (id) => {
+    try {
+        const response = await instance.delete(`/todo/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error(`删除 Todo ${id} 失败:`, error);
+        throw error;
+    }
+}
