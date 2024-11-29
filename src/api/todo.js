@@ -28,3 +28,13 @@ export const deleteById = async (id) => {
         throw error;
     }
 }
+
+export const update = async (newTodo) => {
+    try {
+        const response = await instance.put(`/todo/${newTodo.id}`,newTodo);
+        return response.data;
+    } catch (error) {
+        console.error('更新 Todo 失败:', error);
+        throw error;
+    }
+}
