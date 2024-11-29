@@ -25,8 +25,8 @@ const TodoList = () => {
             <Link to="/done-list" className="nav-link">DoneList</Link>
         </nav>
         <TodoGenerator />
-        <TodoGroup />
         <TodoProgress />
+        <TodoGroup />
     </div>
   );
 }
