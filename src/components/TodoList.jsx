@@ -1,17 +1,16 @@
 import TodoGroup from "./TodoGroup";
 import TodoGenerator from "./TodoGenerator";
 import TodoProgress from "./TodoProgress";
+import {Link} from "react-router-dom";
 
 const TodoList = () => {
   return (
       <div>
           <h1>Todo List</h1>
           <nav>
-              <ul>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/todo-list">TodoList</a></li>
-                  <li><a href="/done-list">DoneList</a></li>
-              </ul>
+              <Link to="/">Home</Link>
+              <Link to="/todo-list">TodoList</Link>
+              <Link to="/done-list">DoneList</Link>
           </nav>
           <TodoGroup />
           <TodoGenerator />

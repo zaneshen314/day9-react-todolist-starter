@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TodoContext } from "../App";
+import {Link} from "react-router-dom";
 
 export const DoneList = () => {
     const { state } = useContext(TodoContext);
@@ -8,13 +9,10 @@ export const DoneList = () => {
     return (
         <div>
             <h1>Done List</h1>
-            <br/>
             <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/todo-list">TodoList</a></li>
-                    <li><a href="/done-list">DoneList</a></li>
-                </ul>
+                <Link to="/">Home</Link>
+                <Link to="/todo-list">TodoList</Link>
+                <Link to="/done-list">DoneList</Link>
             </nav>
             <br/>
             {doneList.map((todo) => {

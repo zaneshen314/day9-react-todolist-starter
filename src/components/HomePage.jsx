@@ -1,13 +1,18 @@
+import {Link} from "react-router-dom";
+
 const HomePage = () => {
     return (
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/todo-list">TodoList</a></li>
-                <li><a href="/done-list">DoneList</a></li>
-            </ul>
-        </nav>
-    );
+        <div>HomePage
+            <br/>
+            <nav>
+                <Link to="/">Home</Link>
+                <Link to="/todo-list">TodoList</Link>
+                <Link to="/done-list">DoneList</Link>
+            </nav>
+        </div>
+
+)
+    ;
 };
 
 export default HomePage;
