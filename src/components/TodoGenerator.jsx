@@ -13,7 +13,7 @@ const TodoGenerator = () => {
   const handleAdd = async () => {
     if (text.trim()) {
       try {
-        const newTodo = await addTodo({id:Date.now(), text: text, done: false });
+        const newTodo = await addTodo({id:null ,text: text, done: false });
         dispatch({ type: ADD_TODO, payload: newTodo });
         setText(""); // 清空输入框
       } catch (error) {
