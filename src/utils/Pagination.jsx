@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './css/Pagination.css';
 
-const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
+const Pagination = ({ totalItems, itemsPerPage, setTodosPerPage, onPageChange }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const [jumpPage, setJumpPage] = useState('');
 
@@ -18,6 +18,7 @@ const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
 
     // 选择每页显示的条目数
     const handleItemsPerPageChange = (e) => {
+        setTodosPerPage(e.target.value)
         onPageChange(1);
     };
 
@@ -90,14 +91,14 @@ const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
                 <button onClick={handleJumpPageChange}>跳转</button>
             </div>
 
-            {/*<div className="per-page-selection">*/}
-            {/*    <label>每页显示: </label>*/}
-            {/*    <select value={itemsPerPage} onChange={handleItemsPerPageChange}>*/}
-            {/*        <option value={5}>5</option>*/}
-            {/*        <option value={10}>10</option>*/}
-            {/*        <option value={15}>15</option>*/}
-            {/*    </select>*/}
-            {/*</div>*/}
+            <div className="per-page-selection">
+                <label>每页显示: </label>
+                <select value={itemsPerPage} onChange={handleItemsPerPageChange}>
+                    <option value={3}>3</option>
+                    <option value={5}>5</option>
+                    <option value={10}>10</option>
+                </select>
+            </div>
         </div>
     );
 };

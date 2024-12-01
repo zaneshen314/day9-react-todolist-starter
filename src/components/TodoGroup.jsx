@@ -31,6 +31,7 @@ const TodoGroup = () => {
             <Pagination
                 totalItems={state.length}
                 itemsPerPage={todosPerPage}
+                setTodosPerPage={setTodosPerPage}
                 onPageChange={handlePageChange}
             />
         </div>
