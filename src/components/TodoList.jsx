@@ -22,7 +22,7 @@ const TodoList = () => {
             }).finally(()=>{
                 setLoading(false);
             });
-        }, 1000);
+        }, 500);
         return () => clearTimeout(timer);
     }, [dispatch]);
 
@@ -38,7 +38,7 @@ const TodoList = () => {
 
         {loading ? (
             <div className="loading-container">
-                <h3>跟Alwyn开船去了，稍后回来.....</h3>
+                <h3>Loading...</h3>
             </div>
         ) : (
             <>

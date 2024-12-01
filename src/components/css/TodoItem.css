@@ -53,3 +53,98 @@
   transition: background-color 0.3s ease;
   margin: 11px;
 }
+
+/* 删除按钮样式 */
+.delete-btn {
+  padding: 8px 16px;
+  background-color: #2e6fb1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: 11px;
+}
+
+/* 删除按钮样式 */
+.edit-btn {
+  padding: 7px 12px;
+  background-color: #687786;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: 11px;
+}
+
+
+/* .modal 样式用于定义弹窗本身 */
+.modal {
+  position: absolute;           /* 使弹窗脱离文档流 */
+  top: 50%;                     /* 垂直居中 */
+  left: 50%;                    /* 水平居中 */
+  transform: translate(-50%, -50%); /* 完全居中 */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* 增加阴影效果 */
+  width: 400px;
+  max-width: 90%;               /* 适应不同屏幕 */
+  z-index: 1000;                /* 确保弹窗显示在顶部 */
+}
+
+/* .overlay 样式用于定义弹窗的背景遮罩 */
+.overlay {
+  position: fixed;              /* 固定在屏幕上 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+  z-index: 999;                 /* 确保背景在弹窗下 */
+}
+
+/* 输入框样式 */
+.modal input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+/* 按钮样式 */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-btn, .cancel-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-btn {
+  background-color: #4CAF50;  /* 绿色 */
+  color: white;
+}
+
+.cancel-btn {
+  background-color: #f44336;  /* 红色 */
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+.cancel-btn:hover {
+  background-color: #e53935;
+}

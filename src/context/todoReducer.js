@@ -1,4 +1,4 @@
-import {ADD_TODO, INIT_TODO, REMOVE_TODO, TOGGLE_TODO} from "./todoActions";
+import {ADD_TODO, EDIT_TODO, INIT_TODO, REMOVE_TODO, TOGGLE_TODO} from "./todoActions";
 
 export const initialState = [
     {id: Date.now(), text: "和Alwyn出去吃饭", done: false},
@@ -18,6 +18,10 @@ export const todoReducer = (state, action) => {
             );
         case REMOVE_TODO:
             return state.filter((todo) => todo.id !== action.payload);
+        case EDIT_TODO:
+            return state.map((todo) =>
+                todo.id === action.payload.id ? {...todo, text: action.payload.text} : todo
+            );
         default:
             return state;
     }
