@@ -29,9 +29,8 @@ const TodoItem = ({ todo }) => {
 
     const handleSaveEdit = async () => {
         if (newText.trim() && newText !== todo.text) {
-            await update({ id: todo.id, text: newText, done: todo.done });
-
-            dispatch({ type: EDIT_TODO, payload: { id: todo.id, text: newText } });
+            const newTodo = await update({ id: todo.id, text: newText, done: todo.done });
+            dispatch({ type: EDIT_TODO, payload: { id: todo.id, text: newTodo.text } });
         }
         setIsEditing(false);
     };
