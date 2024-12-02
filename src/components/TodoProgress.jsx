@@ -10,12 +10,13 @@ const TodoProgress = () => {
 
     // 设置进度条颜色
     const progress = totalTodos === 0 ? -1 : (completedTodos / totalTodos) * 100;
+    console.log(progress +"sz")
 
     let progressBarColor = '';
 
-    if (progress <= 40) {
+    if (progress <= 40 && progress > 0) {
         progressBarColor = 'red';
-    } else if (progress <= 60) {
+    } else if (progress <= 60 && progress > 0) {
         progressBarColor = 'yellow';
     } else {
         progressBarColor = 'green';
