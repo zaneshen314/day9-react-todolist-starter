@@ -11,6 +11,7 @@ const TodoItem = ({ todo }) => {
     const { dispatch } = useContext(TodoContext);
     const [isEditing, setIsEditing] = useState(false);
     const [newText, setNewText] = useState(todo.text);
+    const [isDeleting, setIsDeleting] = useState(false);
 
     const handleToggleTodo = async () => {
         await update({ id: todo.id, text: todo.text, done: !todo.done });
@@ -18,8 +19,16 @@ const TodoItem = ({ todo }) => {
     };
 
     const removeTodo = async () => {
-        await deleteById(todo.id);
-        dispatch({ type: REMOVE_TODO, payload: todo.id });
+        if (isDeleting) return;
+        setIsDeleting(true);
+        try {
+            await deleteById(todo.id);
+            dispatch({ type: REMOVE_TODO, payload: todo.id });
+        } catch (error) {
+            console.error("删除任务失败", error);
+        } finally {
+            setIsDeleting(false);
+        }
     };
 
     const handleEditClick = () => {
