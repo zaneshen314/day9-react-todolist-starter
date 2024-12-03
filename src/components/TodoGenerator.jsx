@@ -3,6 +3,8 @@ import {TodoContext} from "../App";
 import {ADD_TODO, INIT_TODO} from "../context/todoActions";
 import "./css/TodoGenerator.css";
 import {addTodo, getTodoList} from "../api/todo";
+import { message } from 'antd';
+
 const TodoGenerator = () => {
   const [text, setText] = useState("")
   const { dispatch } = useContext(TodoContext);
@@ -11,6 +13,15 @@ const TodoGenerator = () => {
     setText(event.target.value)
   }
   const handleAdd = async () => {
+    if (!text.trim()) {
+      message.error('Todo不能为空');
+      return;
+    }
+
+    if (text.length > 255) {
+      message.error('Todo 内容不能超过 255 个字符!');
+      return;
+    }
     if (text.trim()) {
       try {
         const newTodo = await addTodo({id:null ,text: text, done: false });
