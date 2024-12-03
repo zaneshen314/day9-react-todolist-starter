@@ -4,6 +4,7 @@ import "./css/TodoItem.css";
 import { TodoContext } from "../App";
 import {EDIT_TODO, REMOVE_TODO, TOGGLE_TODO} from "../context/todoActions";
 import { update, deleteById } from "../api/todo";
+import {message} from "antd";
 
 Modal.setAppElement('#root');
 
@@ -37,6 +38,15 @@ const TodoItem = ({ todo }) => {
     };
 
     const handleSaveEdit = async () => {
+        if (!newText.trim()) {
+            message.error('Todo不能为空');
+            return;
+        }
+
+        if (newText.length > 255) {
+            message.error('Todo 内容不能超过 255 个字符!');
+            return;
+        }
         if (newText.trim() && newText !== todo.text) {
             const newTodo = await update({ id: todo.id, text: newText, done: todo.done });
             dispatch({ type: EDIT_TODO, payload: { id: todo.id, text: newTodo.text } });
